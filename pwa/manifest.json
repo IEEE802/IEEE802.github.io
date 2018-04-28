@@ -1,9 +1,9 @@
 {
-    "name": "The Most Awesome Dragon Site",
+    "name": "My Progressive Web App",
     "short_name": "PWA",
     "display": "minimal-ui",
-    "start_url": "/",
-    "theme_color": "#673ab6",
+    "start_url": "/pwa/",
+    "theme_color": "#218fff",
     "background_color": "#111111",
     "icons": [
       {
