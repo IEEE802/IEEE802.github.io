@@ -48,7 +48,7 @@ self.addEventListener('push', function(event) {
 
   const title = 'Push Codelab';
   const options = {
-    body: 'Yay it works.',
+    body: 'Sende jetzt deine Email :)',
     icon: 'images/icon.png',
     badge: 'images/badge.png'
   };
@@ -62,7 +62,7 @@ self.addEventListener('notificationclick', function(event) {
   event.notification.close();
 
   event.waitUntil(
-    clients.openWindow('https://developers.google.com/web/')
+    clients.openWindow('mailto:n@nco.mx')
   );
 });
 
