@@ -80,3 +80,34 @@ self.addEventListener('pushsubscriptionchange', function(event) {
     })
   );
 });
+
+
+self.addEventListener('install', function(e) {
+  e.waitUntil(
+    caches.open('the-magic-cache').then(function(cache) {
+      return cache.addAll([
+        '/',
+        '/pwa/index.html',
+        '/pwa/images/bin_pwa/icon-192.png',
+        '/pwa/images/bin_pwa/icon-512.png',
+        '/pwa/images/badge.png',
+        '/pwa/images/icon.png',
+        '/pwa/scripts/main.js',
+        '/pwa/scripts/pwa_implement.js',
+        '/pwa/styles/index.css',
+        '/pwa/manifest.json',
+        '/pwa/sw.js.json',
+      ]);
+    })
+  );
+});
+
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
+
