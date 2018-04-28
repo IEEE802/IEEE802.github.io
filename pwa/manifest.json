@@ -1,8 +1,8 @@
 {
     "name": "My Progressive Web App",
     "short_name": "PWA",
-    "display": "minimal-ui",
-    "start_url": "./pwa",
+    "display": "standalone",
+    "start_url": "/pwa/index.html",
     "theme_color": "#218fff",
     "background_color": "#111111",
     "icons": [
@@ -10,6 +10,13 @@
         "src": "./images/bin_pwa/icon-192.png",
         "sizes": "192x192",
         "type": "image/png"
+      },
+      {
+        "src": "/etc/designs/bmwcom/resource/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
       }
-    ]
+    ],
+    "splash_pages": null
   }
+  
