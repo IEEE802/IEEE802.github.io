@@ -1,8 +1,11 @@
+
 'use strict';
 
+/* eslint-disable max-len */
 
-const applicationServerPublicKey = 'BH8-hIchXKMI6AKSee8gD0hhPThRqaEhIEtMJwcTjEQhiOKdG-_2tTIO-6hOAK4kwg5M9Saedjxp4hVE-khhWxY';
+const applicationServerPublicKey = 'BMyKrkbcSJZWwpTgTXABzurnKoGwg2_Ej1G50IeVtJHjy37QV-XrVNhDmA6n39Ir3tW5lBQNZUxEL5AeV3BdiH4';
 
+/* eslint-enable max-len */
 
 function urlB64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
@@ -57,6 +60,10 @@ self.addEventListener('pushsubscriptionchange', function(event) {
     })
   );
 });
+
+
+
+
 
 
 self.addEventListener('install', function(e) {
